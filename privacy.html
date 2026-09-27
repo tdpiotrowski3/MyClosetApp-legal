@@ -31,45 +31,64 @@
 <body>
     <div class="container">
         <h1>Privacy Policy</h1>
-        <span class="date">Last Updated: September 23, 2026</span>
+        <span class="date">Last Updated: [DRAFT — set on publish]</span>
         
-        <p>WhichOutfit LLC ("we", "us", or "our") respects your privacy. This Privacy Policy explains what data WhichOutfit collects, how it is used, and your rights. It is written to comply with Apple’s App Store Review Guidelines and Google Play’s Developer Program Policies, including the Google Play User Data policy.</p>
+        <p>WhichOutfit LLC ("we", "us", or "our") respects your privacy. This Privacy Policy explains what data WhichOutfit collects, how it is used, who it is shared with, and your rights. It applies to the WhichOutfit apps for iOS and Android and to whichoutfit.app. It is written to comply with Apple’s App Store Review Guidelines and Google Play’s Developer Program Policies, including the Google Play User Data policy.</p>
 
         <h2>1. Data We Collect</h2>
-        <p>To provide the core functionality of WhichOutfit, we collect the following data:</p>
         <ul>
-            <li><strong>User Content (Photos):</strong> Images of clothing and accessories you upload to build your digital closet.</li>
-            <li><strong>Identifiers:</strong> A unique, anonymous User ID generated to link your device to your closet data and entitlement balances.</li>
-            <li><strong>Purchase History:</strong> Anonymized transaction IDs provided by Apple or Google Play to verify your subscription status and credit balances.</li>
+            <li><strong>Account information:</strong> the email address and name (if provided) from the sign-in method you choose — Sign in with Apple, Google Sign-In, or an email one-time code — and an internal account ID.</li>
+            <li><strong>Closet content:</strong> photos of clothing and accessories you add, and the details attached to them (name, category, colour, brand, fabric, size, notes, price if you enter one).</li>
+            <li><strong>Photos of you, only when you choose to provide them:</strong> a selfie for colour analysis, or a photo used for "on me" try-on or outfit rating.</li>
+            <li><strong>Style profile and activity:</strong> your style-quiz answers and preferences, the outfits you log as worn, saved looks, trips and plans, and your feedback on suggestions.</li>
+            <li><strong>Order emails you forward or share:</strong> if you use receipt import, the email you forward to your private receipt address (sender, subject and text) or share into the app, so its items can be added to your closet.</li>
+            <li><strong>Approximate location, only when you use weather features:</strong> coordinates are sent to our weather provider to fetch a forecast; we do not store your location history.</li>
+            <li><strong>Usage data:</strong> which features you use (for example, that an AI suggestion was generated), used to run and improve the service and to meter plan limits. We do not use third-party advertising or tracking SDKs.</li>
+            <li><strong>Purchase information:</strong> transaction identifiers and subscription status from Apple or Google Play (see Section 3).</li>
         </ul>
 
-        <h2>2. Artificial Intelligence and Cloud Processing</h2>
-        <p>To generate tags and styling recommendations, WhichOutfit uses third-party Artificial Intelligence APIs.</p>
+        <h2>2. Artificial Intelligence Processing</h2>
+        <p>WhichOutfit’s tagging, styling, rating, try-on and photo-cleanup features are powered by Google’s Gemini API.</p>
         <ul>
-            <li><strong>What data is shared:</strong> When you request an AI action, the specific images of the clothing items and your prompt are securely transmitted to our AI provider.</li>
-            <li><strong>No Model Training:</strong> We have strict agreements in place ensuring that your uploaded images and data are <strong>never</strong> used to train the third-party AI models. The data is processed solely to return your styling results and is immediately discarded by the AI provider.</li>
-            <li><strong>Control:</strong> You can limit AI processing by choosing not to use the auto-tagging or AI stylist features.</li>
+            <li><strong>What is sent:</strong> when you use an AI feature, the relevant photos and text (for example, the item being tagged, or the closet details and occasion needed for a suggestion) are sent to Google for processing, through our own servers. Your API requests never go directly from the app to Google.</li>
+            <li><strong>How it is used:</strong> Google processes the data to return a result, under the Gemini API terms and Google’s data-processing terms. [REVIEW: confirm the Gemini API project is on a paid tier, where Google does not use prompts or responses to improve its products, and state Google’s abuse-monitoring retention period accurately before publishing.]</li>
+            <li><strong>Your control:</strong> AI features run only when you use them. You can use your closet without them.</li>
         </ul>
 
         <h2>3. Financial Information</h2>
-        <p>All payments, subscriptions, and credit pack purchases are processed entirely by the app store you purchased through — Apple via StoreKit for App Store purchases, or Google via Google Play Billing for Google Play purchases. We do not collect, process, or store your credit card information, billing address, or personal financial data. We only receive an anonymous digital receipt from Apple or Google to unlock your features.</p>
+        <p>All payments, subscriptions, and credit pack purchases are processed entirely by the app store you purchased through — Apple via StoreKit for App Store purchases, or Google via Google Play Billing for Google Play purchases. We do not collect, process, or store your card details, billing address, or other payment information. We receive a transaction record from Apple or Google (such as a transaction ID, product, purchase date and expiry) to unlock your features and handle renewals and refunds.</p>
 
-        <h2>4. Data Sharing and Third Parties</h2>
-        <p>We do not sell your personal data. We share data only with:</p>
+        <h2>4. Service Providers</h2>
+        <p>We do not sell your personal data or share it for advertising. We use these providers to run WhichOutfit, and they process data only on our behalf:</p>
         <ul>
-            <li><strong>Cloud Infrastructure:</strong> Our secure database provider (Supabase) to store your digital closet, which is tied to your anonymous User ID.</li>
-            <li><strong>AI Providers:</strong> Securely transmitted purely for the fulfillment of the styling features, as outlined in Section 2.</li>
+            <li><strong>Supabase</strong> — database, authentication and file storage for your account and closet.</li>
+            <li><strong>Google (Gemini API)</strong> — AI processing, as described in Section 2. Google also provides Google Sign-In, and Google Play for Android purchases.</li>
+            <li><strong>Apple</strong> — Sign in with Apple and App Store purchases.</li>
+            <li><strong>Postmark</strong> — receives the order emails you forward to your private receipt address.</li>
+            <li><strong>Resend</strong> — sends sign-in codes and, only if you opt in, product emails.</li>
+            <li><strong>SerpAPI</strong> — product-search lookups (item descriptions only, never your identity) for shopping and receipt-photo features.</li>
+            <li><strong>Open-Meteo</strong> — weather forecasts (approximate coordinates only).</li>
+            <li><strong>Vercel</strong> — hosting for whichoutfit.app.</li>
         </ul>
+        <p>We may also disclose data if required by law, or to a successor if WhichOutfit is involved in a merger, acquisition or sale of assets, in which case this policy continues to apply to your data.</p>
 
         <h2>5. Data Retention and Deletion</h2>
-        <p>Your uploaded closet images and data are retained as long as your account is active so you can access your wardrobe across devices.</p>
+        <p>We keep your data while your account is active so your wardrobe is available across your devices.</p>
         <ul>
-            <li><strong>Account Deletion:</strong> You have the right to delete your data at any time. You can trigger a complete deletion of your account, which immediately permanently purges all images, metadata, and credit balances from our active servers.</li>
+            <li><strong>Account deletion:</strong> you can delete your account at any time in the app (More → Delete Account). This deletes your account and the data linked to it from our servers — including your closet photos, closet and profile data, forwarded receipts and usage records. Copies held by the service providers above are handled under their own retention terms.</li>
+            <li><strong>Marketing email:</strong> you can unsubscribe from any product email with one tap.</li>
         </ul>
 
-        <h2>6. Contact Us</h2>
+        <h2>6. Children</h2>
+        <p>WhichOutfit is not directed to children under 13, and we do not knowingly collect personal data from them. [REVIEW: match the age rating used in App Store Connect and Play Console.]</p>
+
+        <h2>7. Your Rights</h2>
+        <p>Depending on where you live, you may have the right to access, correct, export or delete your personal data, or to object to certain processing. Contact us using the details below and we will respond within the time required by law.</p>
+
+        <h2>8. Contact Us</h2>
         <p>If you have questions about this Privacy Policy or how your data is handled, please contact us:</p>
         <ul>
+            <li><strong>Email:</strong> support@whichoutfit.app</li>
             <li><strong>Operated by:</strong> WhichOutfit LLC</li>
             <li><strong>Location:</strong> Sterling Heights, Michigan, USA</li>
         </ul>
